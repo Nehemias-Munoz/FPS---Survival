@@ -9,5 +9,10 @@ public class PlayerInteraction : MonoBehaviour
             GameManager.Instance.gunAmmo += other.gameObject.GetComponent<AmmoBox>().ammo;
             Destroy(other.gameObject);
         }
+
+        if (other.gameObject.CompareTag("MedAmmo"))
+        {
+            GameManager.Instance.playerLives = other.gameObject.GetComponent<MedBox>().lives;
+        }
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.AI;
 public class AI : MonoBehaviour
@@ -31,6 +32,14 @@ public class AI : MonoBehaviour
         else
         {
             EnemyPath();
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            GameManager.Instance.playerLives--;
         }
     }
 
