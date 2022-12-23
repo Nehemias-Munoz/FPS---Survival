@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Enemy
   - DP
+  - GunAmmo
+  - SP
   layers:
   - Default
   - TransparentFX

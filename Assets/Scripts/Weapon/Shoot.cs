@@ -7,7 +7,7 @@ public class Shoot : MonoBehaviour
     [SerializeField] private Transform spawnPoint;
     [SerializeField] private GameObject bullet;
     
-    float shootForce = 1500f;
+    float shootForce = 2500f;
     private float shootRate = 0.5f;
     private float shootRateTime = 0;
 

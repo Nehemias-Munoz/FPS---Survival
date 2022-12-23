@@ -1449,6 +1449,7 @@ GameObject:
   - component: {fileID: 3075682002736467073}
   - component: {fileID: 4694361067227470962}
   - component: {fileID: 3875645560177475825}
+  - component: {fileID: 7113404331966017495}
   m_Layer: 0
   m_Name: ZombieA
   m_TagString: Untagged
@@ -1507,7 +1508,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 1
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -1530,6 +1531,20 @@ MonoBehaviour:
   _navMeshAgent: {fileID: 4694361067227470962}
   distanceToFollowPlayer: 10
   Animator: {fileID: 3075682002736467073}
+--- !u!136 &7113404331966017495
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3075682002745835329}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3075682002745835331
 GameObject:
   m_ObjectHideFlags: 0
