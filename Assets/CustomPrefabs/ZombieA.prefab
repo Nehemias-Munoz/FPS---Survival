@@ -1483,7 +1483,7 @@ Animator:
   m_GameObject: {fileID: 3075682002745835329}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: e4299bf26a09e9049839e1a1b75e562c, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cb82a5f5119544377b7f47a2c50f559a, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -1528,9 +1528,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _navMeshAgent: {fileID: 4694361067227470962}
-  destination:
-  - {fileID: 0}
   distanceToFollowPlayer: 10
+  Animator: {fileID: 3075682002736467073}
 --- !u!1 &3075682002745835331
 GameObject:
   m_ObjectHideFlags: 0

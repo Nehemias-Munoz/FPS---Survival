@@ -9,6 +9,10 @@ public class AI : MonoBehaviour
     private float distanceToFollowPath = 5;
     private float distanceToPlayer;
     public float distanceToFollowPlayer = 10;
+
+    public Animator Animator;
+    
+    
     void Start()
     {
         destination = GameObject.FindGameObjectsWithTag("DP");
@@ -18,6 +22,7 @@ public class AI : MonoBehaviour
 
     void Update()
     {
+        Animator.SetFloat("VelX", transform.position.x);
         distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
         if (distanceToPlayer <= distanceToFollowPlayer)
         {
