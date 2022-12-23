@@ -9,9 +9,11 @@ public class Shoot : MonoBehaviour
     
     float shootForce = 1500f;
     private float shootRate = 0.5f;
-
     private float shootRateTime = 0;
-    
+
+    [Header("Sonido Disparo")] 
+    [SerializeField] private AudioSource _audioSource;
+    [SerializeField]private AudioClip _shotSound;
 
     // Update is called once per frame
     void Update()
@@ -20,6 +22,7 @@ public class Shoot : MonoBehaviour
         {
             if (Time.time > shootRateTime)
             {
+                _audioSource.PlayOneShot(_shotSound);
                 GameObject newBullet;
                 newBullet = Instantiate(bullet, spawnPoint.position, spawnPoint.rotation);
                 newBullet.GetComponent<Rigidbody>().AddForce(spawnPoint.forward * shootForce);
