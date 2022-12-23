@@ -1,11 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 public class AI : MonoBehaviour
 {
     [SerializeField] private NavMeshAgent _navMeshAgent;
-    [SerializeField] private Transform[] destination;
+    private GameObject[] destination;
     private int i = 0;
     private GameObject player;
     private float distanceToFollowPath = 5;
@@ -13,6 +11,7 @@ public class AI : MonoBehaviour
     public float distanceToFollowPlayer = 10;
     void Start()
     {
+        destination = GameObject.FindGameObjectsWithTag("DP");
         _navMeshAgent.destination = destination[0].transform.position;
         player = FindObjectOfType<playerMovement>().gameObject;
     }
@@ -32,8 +31,8 @@ public class AI : MonoBehaviour
 
     void EnemyPath()
     {
-        _navMeshAgent.destination = destination[i].position;
-        if (Vector3.Distance(transform.position, destination[i].position) < distanceToFollowPath )
+        _navMeshAgent.destination = destination[i].transform.position;
+        if (Vector3.Distance(transform.position, destination[i].transform.position) < distanceToFollowPath )
         {
             i = destination[i] != destination[destination.Length - 1] ? i++ : i = 0;
         }

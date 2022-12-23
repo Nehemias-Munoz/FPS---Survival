@@ -174,7 +174,7 @@ GameObject:
   - component: {fileID: 679704492}
   m_Layer: 0
   m_Name: Destination
-  m_TagString: Untagged
+  m_TagString: DP
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -517,7 +517,7 @@ GameObject:
   - component: {fileID: 1376601362}
   m_Layer: 0
   m_Name: Destination 4
-  m_TagString: Untagged
+  m_TagString: DP
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -548,7 +548,7 @@ GameObject:
   - component: {fileID: 1610696280}
   m_Layer: 0
   m_Name: Destination 3
-  m_TagString: Untagged
+  m_TagString: DP
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -705,7 +705,7 @@ GameObject:
   - component: {fileID: 2014445782}
   m_Layer: 0
   m_Name: Destination 2
-  m_TagString: Untagged
+  m_TagString: DP
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -782,6 +782,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3039482668042285654, guid: 966ee6b8d5b6e41e7b93e09c20fe3afd, type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3039482668042285654, guid: 966ee6b8d5b6e41e7b93e09c20fe3afd, type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
