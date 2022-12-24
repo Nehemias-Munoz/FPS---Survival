@@ -43,6 +43,10 @@ public class AI : MonoBehaviour
         }
     }
 
+    public void Kill()
+    {
+        Destroy(gameObject);
+    }
     void EnemyPath()
     {
         _navMeshAgent.destination = destination[i].transform.position;

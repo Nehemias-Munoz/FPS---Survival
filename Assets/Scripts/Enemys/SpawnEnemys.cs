@@ -6,6 +6,7 @@ using Random = UnityEngine.Random;
 
 public class SpawnEnemys : MonoBehaviour
 {
+    public Transform zombieParent = null;
     public GameObject[] enemiesPrefab;
     private GameObject[] spawnPoints;
     [SerializeField] private int numberOfEnemies;
@@ -25,7 +26,8 @@ public class SpawnEnemys : MonoBehaviour
     {
         for (int i = 0; i < numberOfEnemies; i++)
         {
-            Instantiate(enemiesPrefab[0], GetRandomPoint());
+            var position = GetRandomPoint().position;
+            Instantiate(enemiesPrefab[0], position, Quaternion.identity, zombieParent);
             yield return new WaitForSeconds(Random.Range(1, 10));
         }
     }
