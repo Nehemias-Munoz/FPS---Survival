@@ -196,6 +196,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b99b07f384dae4e00a79e91515488b62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _audioSource: {fileID: 0}
+  _useSound: {fileID: 8300000, guid: 5704a103f766f460986f6e554b383e1c, type: 3}
   lives: 10
 --- !u!1 &177648
 GameObject:

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Shoot : MonoBehaviour
 {
-    float shootForce = 2500f;
     private float shootRate = 0.5f;
     private float shootRateTime = 0;
 
