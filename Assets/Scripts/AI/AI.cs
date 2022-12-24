@@ -48,8 +48,9 @@ public class AI : MonoBehaviour
 
     public void Kill()
     {
-        Instantiate(explosionEffect, transform.position, transform.rotation);
+        var explosion = Instantiate(explosionEffect, transform.position, transform.rotation);
         Destroy(gameObject);
+        Destroy(explosion, 1);
     }
     void EnemyPath()
     {
