@@ -1530,6 +1530,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _navMeshAgent: {fileID: 4694361067227470962}
   distanceToFollowPlayer: 10
+  explosionEffect: {fileID: 307586128113334441, guid: 52dd14d3c4a5142c58fa3403fe9d004f, type: 3}
   Animator: {fileID: 3075682002736467073}
 --- !u!136 &7113404331966017495
 CapsuleCollider:

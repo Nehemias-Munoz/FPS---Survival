@@ -10,6 +10,9 @@ public class AI : MonoBehaviour
     private float distanceToFollowPath = 5;
     private float distanceToPlayer;
     public float distanceToFollowPlayer = 10;
+    //Efectos
+    [SerializeField] private GameObject explosionEffect;
+
 
     public Animator Animator;
     
@@ -45,6 +48,7 @@ public class AI : MonoBehaviour
 
     public void Kill()
     {
+        Instantiate(explosionEffect, transform.position, transform.rotation);
         Destroy(gameObject);
     }
     void EnemyPath()
