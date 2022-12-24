@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
         ammoSpawnPoints = GameObject.FindGameObjectsWithTag("DP");
         spawnPoints = GameObject.FindGameObjectsWithTag("SP");
         GenerateAmmo();
+        GenerateMed();
     }
 
     // Update is called once per frame
