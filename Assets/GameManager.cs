@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 
 
@@ -11,6 +12,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TMP_Text livesText;
     [SerializeField] private GameObject ammoPrefab;
     [SerializeField] private GameObject medPrefab;
+    [SerializeField] private GameObject housePrefab;
     private GameObject[] ammoSpawnPoints;
     private GameObject[] spawnPoints;
     public int gunAmmo;
@@ -34,7 +36,10 @@ public class GameManager : MonoBehaviour
     {
         ammoText.text = gunAmmo.ToString();
         livesText.text = playerLives.ToString();
-        
+        if (playerLives <= 0)
+        {
+            SceneManager.LoadScene("GameOverScene");
+        }
     }
 
     void GenerateAmmo()
@@ -49,7 +54,9 @@ public class GameManager : MonoBehaviour
     {
         for (int i = 0; i < 3; i++)
         {
-            Instantiate(ammoPrefab, spawnPoints[Random.Range(0, spawnPoints.Length)].transform);
+            Instantiate(medPrefab, spawnPoints[Random.Range(0, spawnPoints.Length)].transform);
         }
+
+        Instantiate(housePrefab, spawnPoints[Random.Range(0, spawnPoints.Length)].transform);
     }
 }

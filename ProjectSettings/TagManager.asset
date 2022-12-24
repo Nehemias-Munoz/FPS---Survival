@@ -9,6 +9,7 @@ TagManager:
   - GunAmmo
   - SP
   - MedAmmo
+  - SafeZone
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - UI
   - Floor
   - Zombie
-  - 
+  - SafeZone
   - 
   - 
   - 
