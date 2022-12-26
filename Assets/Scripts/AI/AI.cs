@@ -12,7 +12,8 @@ public class AI : MonoBehaviour
     public float distanceToFollowPlayer = 12;
     //Efectos
     [SerializeField] private GameObject explosionEffect;
-
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip zombieAttack;
 
     public Animator Animator;
     
@@ -42,6 +43,7 @@ public class AI : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            audioSource.PlayOneShot(zombieAttack);
             Data.SetLives(Data.GetLives()-1);
         }
     }
@@ -49,6 +51,7 @@ public class AI : MonoBehaviour
     {
         Data.SetScore(Data.GetScore() + 100);
         var explosion = Instantiate(explosionEffect, transform.position, transform.rotation);
+        audioSource.PlayOneShot(audioSource.clip);
         Destroy(gameObject);
         Destroy(explosion, 1);
     }
