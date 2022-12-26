@@ -25,5 +25,10 @@ public class PlayerInteraction : MonoBehaviour
         {
             SceneManager.LoadScene("NextLevelScene");
         }
+
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            GameManager.Instance.playerLives--;
+        }
     }
 }
