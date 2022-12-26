@@ -7,9 +7,9 @@ public class AI : MonoBehaviour
     private GameObject[] destination;
     private int i = 0;
     private GameObject player;
-    private float distanceToFollowPath = 5;
+    private float distanceToFollowPath = 3;
     private float distanceToPlayer;
-    public float distanceToFollowPlayer = 10;
+    public float distanceToFollowPlayer = 12;
     //Efectos
     [SerializeField] private GameObject explosionEffect;
 

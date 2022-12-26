@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class MedBox : MonoBehaviour
 {
-    public int lives = 10;
+    public int lives = 3;
 }
