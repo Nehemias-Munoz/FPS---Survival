@@ -16,7 +16,7 @@ public class PlayerInteraction : MonoBehaviour
 
         if (other.gameObject.CompareTag("MedAmmo"))
         {
-            GameManager.Instance.playerLives = other.gameObject.GetComponent<MedBox>().lives;
+            Data.SetLives(other.gameObject.GetComponent<MedBox>().lives);
             _audioSource.PlayOneShot(_audioSource.clip);
             Destroy(other.gameObject);
         }
@@ -24,11 +24,6 @@ public class PlayerInteraction : MonoBehaviour
         if (other.gameObject.CompareTag("SafeZone"))
         {
             SceneManager.LoadScene("NextLevelScene");
-        }
-
-        if (other.gameObject.CompareTag("Enemy"))
-        {
-            GameManager.Instance.playerLives--;
         }
     }
 }

@@ -207,7 +207,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 82641526}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: WelcomeScene, Assembly-CSharp
         m_MethodName: ChangeScene
         m_Mode: 1
@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 82641529}
   - component: {fileID: 82641528}
   - component: {fileID: 82641527}
-  - component: {fileID: 82641526}
+  - component: {fileID: 82641531}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -277,18 +277,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &82641526
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 82641525}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 828a8d36e2bbb4a5bb3a086056c98a56, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &82641527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -371,6 +359,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &82641531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82641525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 202dd6099d4794f7583ebabd31f9e166, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  livesText: {fileID: 2097880852}
+  scoreText: {fileID: 279815731}
+  levelText: {fileID: 1697610740}
 --- !u!1 &223710853
 GameObject:
   m_ObjectHideFlags: 0
@@ -455,7 +458,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 82641526}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: WelcomeScene, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1

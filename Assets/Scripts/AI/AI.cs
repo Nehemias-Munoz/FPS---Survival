@@ -42,11 +42,12 @@ public class AI : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            GameManager.Instance.playerLives--;
+            Data.SetLives(Data.GetLives()-1);
         }
     }
     public void Kill()
     {
+        Data.SetScore(Data.GetScore() + 100);
         var explosion = Instantiate(explosionEffect, transform.position, transform.rotation);
         Destroy(gameObject);
         Destroy(explosion, 1);

@@ -17,7 +17,6 @@ public class GameManager : MonoBehaviour
     private GameObject[] ammoSpawnPoints;
     private GameObject[] spawnPoints;
     public int gunAmmo;
-    public int playerLives;
     public int zombiesCounter;
     private void Awake()
     {
@@ -43,8 +42,8 @@ public class GameManager : MonoBehaviour
             Instantiate(housePrefab, spawnPoints[Random.Range(0, spawnPoints.Length)].transform);
         }
         ammoText.text = gunAmmo.ToString();
-        livesText.text = playerLives.ToString();
-        if (playerLives <= 0)
+        livesText.text = Data.GetLives().ToString();
+        if (Data.GetLives() <= 0)
         {
             SceneManager.LoadScene("GameOverScene");
         }

@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -21,6 +18,8 @@ public class WelcomeScene : MonoBehaviour
 
     public void ChangeScene()
     {
+        Data.SetLevel(1);
+        Data.SetLives(1);
         SceneManager.LoadScene("GameplayScene");
     }
 

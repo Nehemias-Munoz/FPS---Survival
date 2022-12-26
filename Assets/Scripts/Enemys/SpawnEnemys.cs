@@ -9,7 +9,6 @@ public class SpawnEnemys : MonoBehaviour
     public Transform zombieParent = null;
     public GameObject[] enemiesPrefab;
     private GameObject[] spawnPoints;
-    [SerializeField] private int numberOfEnemies;
 
     private void Awake()
     {
@@ -24,7 +23,7 @@ public class SpawnEnemys : MonoBehaviour
 
     IEnumerator GenerateNewEnemy()
     {
-        for (int i = 0; i < numberOfEnemies; i++)
+        for (int i = 0; i < Data.GetCzombies(); i++)
         {
             var position = GetRandomPoint().position;
             Instantiate(enemiesPrefab[0], position, Quaternion.identity, zombieParent);
