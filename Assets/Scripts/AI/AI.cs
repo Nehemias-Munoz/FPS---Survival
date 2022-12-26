@@ -38,14 +38,13 @@ public class AI : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))
         {
             GameManager.Instance.playerLives--;
         }
     }
-
     public void Kill()
     {
         var explosion = Instantiate(explosionEffect, transform.position, transform.rotation);
