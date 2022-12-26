@@ -28,7 +28,7 @@ public class SpawnEnemys : MonoBehaviour
         {
             var position = GetRandomPoint().position;
             Instantiate(enemiesPrefab[0], position, Quaternion.identity, zombieParent);
-            yield return new WaitForSeconds(Random.Range(1, 10));
+            yield return new WaitForSeconds(Random.Range(1, 5));
         }
     }
     

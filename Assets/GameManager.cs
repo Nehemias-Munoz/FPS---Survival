@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
     [SerializeField] private TMP_Text ammoText;
     [SerializeField] private TMP_Text livesText;
+    [SerializeField] private TMP_Text zombiesCounterText;
     [SerializeField] private GameObject ammoPrefab;
     [SerializeField] private GameObject medPrefab;
     [SerializeField] private GameObject housePrefab;
@@ -17,6 +18,7 @@ public class GameManager : MonoBehaviour
     private GameObject[] spawnPoints;
     public int gunAmmo;
     public int playerLives;
+    public int zombiesCounter;
     private void Awake()
     {
         Instance = this;
@@ -34,6 +36,12 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        zombiesCounter = GameObject.FindGameObjectsWithTag("Enemy").Length;
+        zombiesCounterText.text = zombiesCounter.ToString();
+        if (zombiesCounter == 0)
+        {
+            Instantiate(housePrefab, spawnPoints[Random.Range(0, spawnPoints.Length)].transform);
+        }
         ammoText.text = gunAmmo.ToString();
         livesText.text = playerLives.ToString();
         if (playerLives <= 0)
@@ -56,7 +64,5 @@ public class GameManager : MonoBehaviour
         {
             Instantiate(medPrefab, spawnPoints[Random.Range(0, spawnPoints.Length)].transform);
         }
-
-        Instantiate(housePrefab, spawnPoints[Random.Range(0, spawnPoints.Length)].transform);
     }
 }
